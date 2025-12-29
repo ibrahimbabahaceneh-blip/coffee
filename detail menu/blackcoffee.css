@@ -1,0 +1,130 @@
+@font-face {
+    font-family: Tagesschrift;
+    src: url(../fonts/Tagesschrift-Regular.ttf);
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Light.ttf);
+}
+*{
+    box-sizing: border-box;
+    color: white;
+    margin: 0;
+}
+body{
+    background-color: 	hsl(12, 30%, 8%);
+    border: 2px solid hsl(12, 30%, 15%);
+    border-radius: 2em;
+    corner-shape: scoop;
+    padding: 20px;
+    height: calc(100dvh-200px);
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 10px;
+    position: relative;
+}
+#Box{
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pic{
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.picbox{
+    border: 2px solid hsl(12, 30%, 15%);
+    border-radius: 2em;
+    corner-shape: scoop;
+    width: 90%;
+    height: 95%;
+    padding: 25px;
+}
+.picbox img{
+    object-fit: fill;
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: 100%;
+    border: 2px dotted hsl(12, 30%, 15%);
+    border-radius: 2em;
+    transition: transform 200ms, box-shadow 200ms;
+}
+#info{
+    border: 2px solid hsl(12, 30%, 15%);
+    border-radius: 2em;
+    corner-shape: scoop;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 25px;
+    padding: 25px;
+    height: 95%;
+    width: 100%;
+}
+.name{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid hsl(12, 30%, 15%);
+    border-radius: 2em;
+    width: 100%;
+    height: 13vh;
+    text-align: center;
+    color: white;
+    font-family: Tagesschrift;
+    font-size: 3vh;
+}
+#ingredient{
+    border: 2px dotted hsl(12, 30%, 15%);
+    border-radius: 2em;
+    width: 100%;
+    padding: 20px 20px 10px 30px;
+    font-family: Montserrat;
+}
+#ingredient h1{
+    padding-bottom: 10px;
+}
+#ingredient ul li{
+    padding: 5px 0 10px 0;
+}
+.picbox img:hover{
+    transform: scale(1.02 , 1.02);
+    box-shadow: 3px 3px 10px hsl(12, 30%, 4%);
+}
+#price{
+    border: 2px solid hsl(12, 30%, 15%);
+    border-radius: 2em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    column-gap: 20px;
+    height: 13vh;
+    font-size: 2.3vh;
+    font-family: Montserrat;
+}
+@media (max-width: 500px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        height: 170vh;
+    }
+    .picbox{
+        width: 100%;
+    }
+    .name{
+        position: sticky;
+    }
+}
