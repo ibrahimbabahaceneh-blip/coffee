@@ -1,0 +1,172 @@
+@font-face {
+    font-family: Tagesschrift;
+    src: url(../fonts/Tagesschrift-Regular.ttf);
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Light.ttf);
+}
+*{
+    box-sizing: border-box;
+    color: white;
+    margin: 0;
+}
+body{
+    background-color: 	hsl(12, 30%, 8%);
+    border: 2px solid hsl(12, 30%, 15%);
+    border-radius: 2em;
+    corner-shape: scoop;
+    padding: 10px;
+    height: fit-content;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 10px;
+    position: relative;
+}
+#back{
+    background-color: 	hsl(12, 30%, 8%);
+    border: 2px solid hsl(12, 30%, 15%);
+    border-radius: 50%;
+    position: fixed;
+    top: 11px;
+    left: 7px;
+    width: 80px;
+    height: 80px;
+    transition: transform 200ms , box-shadow 200ms;
+}
+#back button{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#back button img{
+    object-fit: contain;
+    background-color: transparent;
+    width: 60%;
+}
+#back:hover{
+    transform: scale(1.07, 1.07);
+    box-shadow: 3px 3px 10px hsl(12, 30%, 4%);
+}
+#Box{
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pic{
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.picbox{
+    border: 2px solid hsl(12, 30%, 15%);
+    border-radius: 2em;
+    corner-shape: scoop;
+    width: 90%;
+    height: 95%;
+    padding: 25px;
+}
+.picbox img{
+    object-fit: fill;
+    aspect-ratio: 9/16;
+    width: 100%;
+    height: 100%;
+    border: 2px dotted hsl(12, 30%, 15%);
+    border-radius: 2em;
+    transition: transform 200ms, box-shadow 200ms;
+}
+#info{
+    border: 2px solid hsl(12, 30%, 15%);
+    border-radius: 2em;
+    corner-shape: scoop;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 25px;
+    padding: 25px;
+    height: 95%;
+    width: 100%;
+}
+.name{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid hsl(12, 30%, 15%);
+    border-radius: 2em;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    color: white;
+    font-family: Tagesschrift;
+    font-size: 3vh;
+    padding: 10px;
+}
+#ingredient{
+    border: 2px dotted hsl(12, 30%, 15%);
+    border-radius: 2em;
+    width: 100%;
+    padding: 7%;
+    font-family: Montserrat;
+}
+#ingredient h1{
+    padding-bottom: 10px;
+    font-size: 5vh;
+}
+#ingredient ul li{
+    padding: 5px 0 10px 0;
+    font-size: 3vh;
+}
+.picbox img:hover{
+    transform: scale(1.02 , 1.02);
+    box-shadow: 3px 3px 10px hsl(12, 30%, 4%);
+}
+#price{
+    border: 2px solid hsl(12, 30%, 15%);
+    border-radius: 2em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    column-gap: 20px;
+    height: 13vh;
+    font-size: 2.3vh;
+    font-family: Montserrat;
+}
+@media (max-width: 500px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+    .picbox{
+        width: 100%;
+    }
+    #back{
+        top: 11px;
+        left: 7px;
+        width: 50px;
+        height: 50px;
+        z-index: 1;
+    }
+    #ingredient{
+        padding: 10% 0 10% 0;
+    }
+    #ingredient h1{
+        padding-left: 6%;
+    }
+}
